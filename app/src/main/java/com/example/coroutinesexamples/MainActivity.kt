@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.Main).launch {
             printFollowers()
         }
+        lifecycle.addObserver(Observer())
+        Log.d("Main", "Activity OnCreate")
     }
 
     private suspend fun printFollowers(){
