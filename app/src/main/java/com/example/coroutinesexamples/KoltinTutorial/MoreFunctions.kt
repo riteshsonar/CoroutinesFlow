@@ -10,6 +10,7 @@ fun main(){
     println(fn(1.0,2.0))
     fn= ::power
     println(fn(2.0,3.0))
+
 }
 
 fun addition(a:Double , b:Double):Double{
