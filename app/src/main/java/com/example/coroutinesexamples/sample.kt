@@ -1,5 +1,7 @@
 package com.example.coroutinesexamples
 
+import java.lang.Math.sqrt
+
 fun Array<Int>.findLargestNumber():Int?{
 
     if (this.isEmpty())return null
@@ -23,6 +25,15 @@ fun main(){
     }else{
         println("The array is empty")
     }
+
+    val intArray = intArrayOf(4, 9, 16, 25) // Example IntArray
+
+    val sqrArray = intArray.map { sqrt(it.toDouble()) }
+    val sqrtArray = intArray.map { sqrt(it.toDouble()) }.toDoubleArray()
+    val sqr= intArrayOf(4,6,7,3,5)
+
+    println("Square roots of elements in the array:")
+    sqrArray.forEach { println(it) }
 
 }
 

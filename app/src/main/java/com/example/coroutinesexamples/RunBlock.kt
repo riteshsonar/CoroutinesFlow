@@ -5,11 +5,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 fun main(){
-    runBlocking {
-        launch {
-            delay(1000)
-            println("World")
-        }
-        println("Hello")
-    }
+    println("hello world")
+
 }
