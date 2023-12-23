@@ -14,6 +14,7 @@ fun main(){
 }
 
 fun addition(a:Double , b:Double):Double{
+
     return a + b
 }
 fun power(a:Double,b:Double):Double{
