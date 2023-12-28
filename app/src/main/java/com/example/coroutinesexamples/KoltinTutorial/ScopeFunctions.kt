@@ -15,6 +15,16 @@ fun main() {
             oddNumbers.add(number)
         }
     }
+    val num= arrayOf(1,3,4,56,7,9,8,10,40,55)
+    for(numbers in num){
+        if (numbers % 2==0){
+            println("Even number is $numbers")
+        }
+    }
+    val listInt= listOf<Int>(1,2,3,4,5,7,8,9,13)
+    val rr = num.filter { it % 2==0 }
+    val result= listInt.filter { it % 2==0 }
+    println(rr)
 
     val sqrtEven = evenNumbers.map { sqrt(it.toDouble()) }.toDoubleArray()
     val sqrtOdd = oddNumbers.map { sqrt(it.toDouble()) }.toDoubleArray()
