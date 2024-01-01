@@ -9,9 +9,10 @@ class DaggerMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dagger_main)
 
+
         val userRepository = UserRepository()
         val emailService = EmailService()
-        val userRegistrationService = UserRegistrationService(userRepository,emailService)
-        userRegistrationService.registerUser("ritesh.sonar111@gmail.com","12345")
+        /*val userRegistrationService = DaggerUserRegistrationComponent.builder().build()
+        userRegistrationService.registerUser("ritesh.sonar111@gmail.com","12345")*/
     }
 }

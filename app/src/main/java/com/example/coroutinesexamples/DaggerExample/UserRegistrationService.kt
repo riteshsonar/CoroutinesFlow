@@ -1,6 +1,8 @@
 package com.example.coroutinesexamples.DaggerExample
 
-class UserRegistrationService(private val userRepository: UserRepository ,
+import javax.inject.Inject
+
+class UserRegistrationService @Inject constructor(private val userRepository: UserRepository ,
                               private val emailService: EmailService
 ) {
 
