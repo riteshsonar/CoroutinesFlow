@@ -6,6 +6,7 @@ import android.util.Log
 import com.example.coroutinesexamples.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.system.measureTimeMillis
@@ -22,10 +23,10 @@ class AsyncAwaitCoroutineActivity : AppCompatActivity() {
 
         GlobalScope.launch(Dispatchers.IO) {
             val time = measureTimeMillis {
-                val answer1 = networkCall1()
-                val answer2 = networkCall2()
-                Log.d(TAG,"Answer1 is $answer1")
-                Log.d(TAG,"Answer2 is $answer2")
+                val answer1 = async { networkCall1() }
+                val answer2 = async { networkCall2() }
+                Log.d(TAG,"Answer1 is ${answer1.await()}")
+                Log.d(TAG,"Answer2 is ${answer2.await()}")
             }
             Log.d(TAG," Requests took $time ms. ")
         }
