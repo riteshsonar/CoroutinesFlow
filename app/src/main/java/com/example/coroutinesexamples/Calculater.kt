@@ -1,7 +1,7 @@
 package com.example.coroutinesexamples
 
 
-class Calculator {
+open class Calculator {
     fun add(a: Int, b: Int): Int {
         return a + b
     }

@@ -1,6 +1,6 @@
 package com.example.coroutinesexamples
 
-class Permutation {
+class Permutation : Calculator(){
 
     /**
      * permutation function
