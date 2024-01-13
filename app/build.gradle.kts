@@ -56,6 +56,10 @@ dependencies {
     implementation ("com.google.dagger:dagger:2.28.3")
     annotationProcessor ("com.google.dagger:dagger-compiler:2.25.3")
     annotationProcessor ("com.google.dagger:dagger-android-processor:2.25.3")
+    //room
+
+    implementation ("androidx.room:room-runtime:2.6.1")
+    annotationProcessor ("androidx.room:room-compiler:2.6.1")
 
 
 

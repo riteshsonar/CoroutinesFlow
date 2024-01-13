@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.SET_TIME"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoroutinesExamples"
         tools:targetApi="31">
+        <activity
+            android:name=".TODOList.TODOListActivity"
+            android:exported="false" />
         <activity
             android:name=".Retrofit.RetrofitActivity"
             android:exported="false" />
