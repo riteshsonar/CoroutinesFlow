@@ -28,6 +28,9 @@ android {
             )
         }
     }
+    dataBinding {
+        enable = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -62,6 +65,8 @@ dependencies {
 
     implementation ("androidx.room:room-runtime:2.6.1")
     annotationProcessor ("androidx.room:room-compiler:2.6.1")
+    annotationProcessor ("android.arch.persistence.room:compiler:1.1.1")
+
 
 
 
