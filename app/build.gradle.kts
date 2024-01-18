@@ -67,6 +67,9 @@ dependencies {
     annotationProcessor ("androidx.room:room-compiler:2.6.1")
     annotationProcessor ("android.arch.persistence.room:compiler:1.1.1")
 
+    //Biometric Auth
+    implementation("androidx.biometric:biometric:1.1.0")
+
 
 
 

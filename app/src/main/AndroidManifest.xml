@@ -7,6 +7,9 @@
         android:name="android.permission.SET_TIME"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+
+
 
     <application
         android:allowBackup="true"
@@ -18,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoroutinesExamples"
         tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".TODOList.TODOListActivity"
             android:exported="false" />
@@ -37,7 +43,7 @@
             android:name=".CancelActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".BioMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
