@@ -34,6 +34,8 @@ fun main(){
 
     println("Square roots of elements in the array:")
     sqrArray.forEach { println(it) }
+    println("$sqr")
+    println("$sqrArray")
 
 }
 
