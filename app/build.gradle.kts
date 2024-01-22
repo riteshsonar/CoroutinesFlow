@@ -31,6 +31,7 @@ android {
     dataBinding {
         enable = true
     }
+    viewBinding { enable = true }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -61,6 +62,8 @@ dependencies {
     //implementation ("com.google.dagger:dagger:2.28.3")
     //annotationProcessor ("com.google.dagger:dagger-compiler:2.25.3")
     //annotationProcessor ("com.google.dagger:dagger-android-processor:2.25.3")
+    implementation ("com.google.dagger:dagger:2.17")
+    kapt ("com.google.dagger:dagger-compiler:2.17")
     //room
 
     implementation ("androidx.room:room-runtime:2.6.1")
