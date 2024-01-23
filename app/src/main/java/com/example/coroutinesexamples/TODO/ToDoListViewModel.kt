@@ -1,4 +1,4 @@
-package com.example.coroutinesexamples.TODOList
+package com.example.coroutinesexamples.TODO
 
 import android.app.AlarmManager
 import android.app.Application
@@ -15,9 +15,9 @@ import androidx.annotation.WorkerThread
 import androidx.databinding.ObservableField
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.example.coroutinesexamples.TODOList.Database.ToDoListDataEntity
-import com.example.coroutinesexamples.TODOList.Database.ToDoListDatabase
-import com.example.coroutinesexamples.TODOList.notification.AlarmReceiver
+import com.example.coroutinesexamples.TODO.Database.ToDoListDataEntity
+import com.example.coroutinesexamples.TODO.Database.ToDoListDatabase
+import com.example.coroutinesexamples.TODO.notification.AlarmReceiver
 import java.util.Calendar
 import java.util.Locale
 import java.util.TimeZone

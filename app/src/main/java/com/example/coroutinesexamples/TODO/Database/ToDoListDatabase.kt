@@ -1,4 +1,4 @@
-package com.example.coroutinesexamples.TODOList.Database
+package com.example.coroutinesexamples.TODO.Database
 
 import android.content.Context
 import androidx.room.Database

@@ -1,7 +1,6 @@
-package com.example.coroutinesexamples.TODOList.notification
+package com.example.coroutinesexamples.TODO.notification
 
 import android.annotation.SuppressLint
-import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.Service
@@ -13,11 +12,11 @@ import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.example.coroutinesexamples.R
-import com.example.coroutinesexamples.TODOList.Database.ToDoListDatabase
+import com.example.coroutinesexamples.TODO.Database.ToDoListDatabase
 import java.util.Date
 
 class AlarmReceiver : BroadcastReceiver() {
-private val GROUP_MESSAGE : String = "TODOList"
+private val GROUP_MESSAGE : String = "TODO"
     companion object{
         private val  TAG : String = "AlarmReceiver"
 
