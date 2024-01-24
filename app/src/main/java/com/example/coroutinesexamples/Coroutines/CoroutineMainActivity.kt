@@ -23,6 +23,7 @@ class CoroutineMainActivity : AppCompatActivity() {
 
         }
 
+
         val job = GlobalScope.launch(Dispatchers.Default) {
             repeat(5){
                 Log.e(TAG,"Coroutine still working.....")

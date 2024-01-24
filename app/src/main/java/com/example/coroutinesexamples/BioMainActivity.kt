@@ -26,23 +26,35 @@ class BioMainActivity : AppCompatActivity() {
 
         when (biometricManager.canAuthenticate()) {
             BiometricManager.BIOMETRIC_SUCCESS -> {
-                binding.msgtext.text = "You can use the fingerprint sensor to login"
+                 "You can use the fingerprint sensor to login".also { binding.msgtext.text = it }
                 binding.msgtext.setTextColor(Color.parseColor("#fafafa"))
             }
 
             BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE -> {
-                binding.msgtext.text = "This device doesnot have a fingerprint sensor"
+                 "This device does not have a fingerprint sensor".also { binding.msgtext.text = it }
                 binding.login.visibility = View.GONE
             }
 
             BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE -> {
-                binding.msgtext.text = "The biometric sensor is currently unavailable"
+                "The biometric sensor is currently unavailable".also { binding.msgtext.text = it }
                 binding.login.visibility = View.GONE
             }
 
             BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> {
-                binding.msgtext.text = "Your device doesn't have fingerprint saved,please check your security settings"
+                "Your device doesn't have fingerprint saved,please check your security settings".also { binding.msgtext.text = it }
                 binding.login.visibility = View.GONE
+            }
+
+            BiometricManager.BIOMETRIC_ERROR_SECURITY_UPDATE_REQUIRED -> {
+                TODO()
+            }
+
+            BiometricManager.BIOMETRIC_ERROR_UNSUPPORTED -> {
+                TODO()
+            }
+
+            BiometricManager.BIOMETRIC_STATUS_UNKNOWN -> {
+                TODO()
             }
         }
 
@@ -60,7 +72,7 @@ class BioMainActivity : AppCompatActivity() {
             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                 super.onAuthenticationSucceeded(result)
                 Toast.makeText(applicationContext, "Login Success", Toast.LENGTH_SHORT).show()
-                binding.login.text = "Login Successful"
+                 "Login Successful".also { binding.login.text }
             }
         })
         // creating a variable for our promptInfo
@@ -70,11 +82,11 @@ class BioMainActivity : AppCompatActivity() {
         val promptInfo = PromptInfo.Builder().setTitle("GFG")
             .setDescription("Use your fingerprint to login ").setNegativeButtonText("Cancel")
             .build()
-        binding.login.setOnClickListener(View.OnClickListener {
+        binding.login.setOnClickListener {
             biometricPrompt.authenticate(
                 promptInfo
             )
-        })
+        }
 
 
     }
