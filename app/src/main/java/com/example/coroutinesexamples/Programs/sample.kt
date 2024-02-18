@@ -1,4 +1,4 @@
-package com.example.coroutinesexamples
+package com.example.coroutinesexamples.Programs
 
 import java.lang.Math.sqrt
 

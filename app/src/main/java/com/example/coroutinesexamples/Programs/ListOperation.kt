@@ -1,4 +1,6 @@
-package com.example.coroutinesexamples
+package com.example.coroutinesexamples.Programs
+
+import com.example.coroutinesexamples.Student
 
 fun main() {
 

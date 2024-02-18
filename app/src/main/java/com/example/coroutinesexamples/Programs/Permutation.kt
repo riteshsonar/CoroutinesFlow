@@ -1,4 +1,4 @@
-package com.example.coroutinesexamples
+package com.example.coroutinesexamples.Programs
 
 class Permutation : Calculator(){
 
