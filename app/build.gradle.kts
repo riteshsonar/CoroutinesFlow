@@ -36,6 +36,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    composeOptions {
+
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -72,6 +75,8 @@ dependencies {
 
     //Biometric Auth
     implementation("androidx.biometric:biometric:1.1.0")
+    implementation("androidx.activity:activity-compose:1.8.0")
+
 
 
 
