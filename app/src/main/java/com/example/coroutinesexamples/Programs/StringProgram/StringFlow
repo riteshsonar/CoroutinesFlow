@@ -5,13 +5,13 @@ String Program and their description
 // program to return the maximum occurring character in the input string,
 e.g., if the input string is "Java" then the function should return 'a'.
 
-2) How to remove all duplicates from a given string?
+2)  How to remove all duplicates from a given string?
     Write a program to remove all the duplicate characters from a given input String, like,
     if the given String is "Java" then the output should be "Java". The second or further occurrence
     of duplicates should be removed.
 
 
-3) How to print the duplicate characters from the given String? (solution)
+3)  How to print the duplicate characters from the given String? (solution)
     program to return the duplicate characters from given String, for example,
     if given String is "C++" then your program should print "+" Similarly,
     if the input is "Java and JavaScript" then your program should print "J", "a" and "v".
