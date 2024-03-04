@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -20,6 +21,9 @@ class MainActivity : AppCompatActivity() {
        /* CoroutineScope(Dispatchers.Main).launch {
             task1()
         }*/
+        GlobalScope.launch {
+
+        }
         CoroutineScope(Dispatchers.Main).launch {
             printFollowers()
         }
