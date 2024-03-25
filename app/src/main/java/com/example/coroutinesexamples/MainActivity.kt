@@ -1,9 +1,21 @@
 package com.example.coroutinesexamples
 
+import android.content.Intent
 import android.os.Build.VERSION_CODES.N
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.view.View.OnClickListener
 import androidx.appcompat.app.AppCompatActivity
+import com.example.coroutinesexamples.Coroutines.AllScopesActivity
+import com.example.coroutinesexamples.Coroutines.BasicCoroutinesTestActivity
+import com.example.coroutinesexamples.Coroutines.CoroutineBuilderActivity
+import com.example.coroutinesexamples.Coroutines.HandlingExceptionActivity
+import com.example.coroutinesexamples.Coroutines.JobsParallelActivity
+import com.example.coroutinesexamples.Coroutines.NestedGlobalScopeActivity
+import com.example.coroutinesexamples.Coroutines.SequentialCoroutinesActivity
+import com.example.coroutinesexamples.databinding.ActivityBioMainBinding
+import com.example.coroutinesexamples.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -13,55 +25,37 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.yield
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() ,OnClickListener{
     private val TAG :String= "Kotlin"
+
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-       /* CoroutineScope(Dispatchers.Main).launch {
-            task1()
-        }*/
-        GlobalScope.launch {
-
+       // setContentView(R.layout.activity_main)
+        binding=ActivityMainBinding.inflate(layoutInflater)
+        val view=binding.root
+        setContentView(view)
+        listOf(binding.button1, binding.button2, binding.button3, binding.button4, binding.button5, binding.button6, binding.button7).forEach {
+            it.setOnClickListener(this)
         }
-        CoroutineScope(Dispatchers.Main).launch {
-            printFollowers()
+    }
+
+    override fun onClick(v: View?) {
+        var intent:Intent?= null
+        v?.let {
+            when(it?.id){
+                R.id.button1 -> intent = Intent(this@MainActivity,BasicCoroutinesTestActivity::class.java)
+                R.id.button2 -> intent = Intent(this@MainActivity,CoroutineBuilderActivity::class.java)
+                R.id.button3 -> intent = Intent(this@MainActivity,SequentialCoroutinesActivity::class.java)
+                R.id.button4 -> intent = Intent(this@MainActivity,JobsParallelActivity::class.java)
+                R.id.button5 -> intent = Intent(this@MainActivity,AllScopesActivity::class.java)
+                R.id.button6 -> intent = Intent(this@MainActivity,NestedGlobalScopeActivity::class.java)
+                R.id.button7 -> intent = Intent(this@MainActivity,HandlingExceptionActivity::class.java)
+
+            }
+            startActivity(intent)
         }
-        lifecycle.addObserver(Observer())
-        Log.d("Main", "Activity OnCreate")
     }
-
-    private suspend fun printFollowers(){
-        val job= CoroutineScope(Dispatchers.IO).launch {
-            var fb=async { getFollowers() }
-            var insta=async { getInstaFollowers() }
-            Log.d(TAG,"FaceBook Followers ${fb.await()} insta ${insta.await()}")
-
-        }
-        //join function handel a seqvance of execution
-       // job.join()
-
-    }
-    private suspend fun getFollowers():Int{
-        delay(10000)
-        return 54
-    }
-    private suspend fun getInstaFollowers():Int{
-        delay(10000)
-        return 113
-    }
-    suspend fun task1(){
-        Log.d(TAG,"Starting Task 1")
-        //suspend function when a thread for wait state suspend coroutine for next execution
-        yield()
-        Log.d(TAG,"Ending Task 1")
-    }
-    suspend fun task2(){
-        Log.d(TAG,"Starting Task2")
-        yield()
-        Log.d(TAG,"Ending Task2")
-    }
-
 
 
 }

@@ -1,4 +1,4 @@
-package com.example.coroutinesexamples
+package com.example.coroutinesexamples.fingerprintPattern
 
 import android.graphics.Color
 import android.os.Bundle
@@ -10,6 +10,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.biometric.BiometricPrompt.PromptInfo
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import com.example.coroutinesexamples.R
 import com.example.coroutinesexamples.databinding.ActivityBioMainBinding
 
 
@@ -21,7 +22,7 @@ class BioMainActivity : AppCompatActivity() {
     var executor = ContextCompat.getMainExecutor(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_bio_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_bio_main)
         val biometricManager: BiometricManager = BiometricManager.from(this)
 
         when (biometricManager.canAuthenticate()) {

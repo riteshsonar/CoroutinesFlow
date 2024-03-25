@@ -55,9 +55,10 @@ dependencies {
     //Retrofit and Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
     // retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-// GSON
+    // GSON
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
     //dagger 2
@@ -67,11 +68,14 @@ dependencies {
     implementation ("com.google.dagger:dagger:2.17")
     kapt ("com.google.dagger:dagger-compiler:2.17")
     //room
-
-
     implementation ("androidx.room:room-runtime:2.6.1")
     annotationProcessor ("androidx.room:room-compiler:2.6.1")
     annotationProcessor ("android.arch.persistence.room:compiler:1.1.1")
+
+    //lifecycle
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-alpha05")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-alpha05")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.3.0-alpha05")
 
     //Biometric Auth
     implementation("androidx.biometric:biometric:1.1.0")

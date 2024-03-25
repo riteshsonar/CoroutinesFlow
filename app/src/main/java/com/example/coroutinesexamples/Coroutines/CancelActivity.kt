@@ -1,8 +1,9 @@
-package com.example.coroutinesexamples
+package com.example.coroutinesexamples.Coroutines
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.coroutinesexamples.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
