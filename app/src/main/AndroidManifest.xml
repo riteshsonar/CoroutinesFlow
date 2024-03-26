@@ -40,15 +40,11 @@
         <activity
             android:name=".Coroutines.BasicCoroutinesTestActivity"
             android:exported="false" />
+
         <activity
-            android:name=".fingerprintPattern.TODOMainActivity"
+            android:name=".fingerprintPattern.BioMainActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".fingerprintPattern.TODOListActivity"
-            android:exported="false" />
+
         <activity
             android:name=".Retrofit.RetrofitActivity"
             android:exported="false" />
@@ -65,7 +61,7 @@
             android:name=".Coroutines.CancelActivity"
             android:exported="false" />
         <activity
-            android:name=".fingerprintPattern.BioMainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
