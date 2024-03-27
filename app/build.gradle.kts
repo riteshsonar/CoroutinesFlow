@@ -64,7 +64,8 @@ dependencies {
     //dagger 2
     implementation ("com.google.dagger:dagger:2.50")
     annotationProcessor ("com.google.dagger:dagger-compiler:2.50")
-    annotationProcessor ("com.google.dagger:dagger-android-processor:2.25.3")
+    //annotationProcessor ("com.google.dagger:dagger-android-processor:2.25.3")
+
 
     //room
     implementation ("androidx.room:room-runtime:2.6.1")
@@ -82,3 +83,4 @@ dependencies {
 
 
 }
+kapt { generateStubs = true }
