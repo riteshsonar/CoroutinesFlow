@@ -2,8 +2,8 @@ package com.example.coroutinesexamples.Coroutines
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import com.android.tools.build.jetifier.core.utils.Log
 import com.example.coroutinesexamples.R
 import com.example.coroutinesexamples.databinding.ActivityBasicCoroutinesTestBinding
 import kotlinx.coroutines.CoroutineScope
@@ -52,7 +52,7 @@ class BasicCoroutinesTestActivity : AppCompatActivity() {
      */
     private fun doNotBlockMainThread() {
         CoroutineScope(Dispatchers.IO).launch {
-            Log.v("Patym",Thread.currentThread().name)
+            Log.d("Patym",Thread.currentThread().name)
             Log.v("Patym","Job Started")
             delay(4000)
             Log.v("Patym","Job Ended")
