@@ -7,6 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.coroutinesexamples"
+
     compileSdk = 34
 
     defaultConfig {

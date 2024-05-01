@@ -49,6 +49,7 @@ class CoroutineBuilderActivity : AppCompatActivity() {
     }
 
     private fun startCoroutineUsingRunBlocking() {
+        //    runBlocking: It is used to start a new coroutine. The main thread is blocked until the related task is completed.
         val result = runBlocking {
             getStringResult()
         }
